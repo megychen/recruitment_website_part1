@@ -11,7 +11,12 @@
       </td>
       <td>
         <%= link_to("Edit", edit_admin_job_path(job)) %> |
-        <%= link_to("Destroy", admin_job_path(job), method: :delete, data: { confirm: "Are you Sure?" }) %>
+        <%= link_to("Destroy", admin_job_path(job), method: :delete, data: { confirm: "Are you Sure?" }) %> |
+        <% if job.is_hidden %>
+          <%= link_to("Public", public_admin_job_path(job), method: :post) %>
+        <% else %>
+          <%= link_to("Hide", hide_admin_job_path(job), method: :post) %>
+        <% end %>
       </td>
       <td>
         <%= job.created_at %>
