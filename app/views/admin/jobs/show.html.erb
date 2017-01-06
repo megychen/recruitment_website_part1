@@ -4,7 +4,7 @@
   <p>Title: <%= @job.title %></p>
   <p>Description: <%= @job.description %></p>
   <p>Created at: <%= @job.created_at %></p>
-  <p>Contact: <%= @job.user.email %></p>
+  <p>Contact: <%= @job.contact_email %></p>
   <p><%= link_to("Edit", edit_admin_job_path(@job)) %> | <%= link_to("Back", admin_jobs_path) %> |
      <%= link_to("Destroy", admin_job_path(@job), method: :delete) %>
   </p>
