@@ -16,3 +16,15 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  background-color: #F0F8FF
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background: #000;
+  width: 100%;
+  border-radius: 5px;
+}
